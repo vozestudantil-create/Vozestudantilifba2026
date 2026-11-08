@@ -1,0 +1,9 @@
+VOZ ESTUDANTIL — PWA
+
+1. Faça upload de TODO o conteúdo desta pasta para uma hospedagem estática HTTPS.
+2. O arquivo inicial deve permanecer como index.html na raiz.
+3. manifest.webmanifest, sw.js e a pasta assets devem permanecer na mesma estrutura.
+4. A instalação PWA depende de HTTPS e suporte do navegador.
+5. O formulário é demonstrativo e ainda NÃO armazena nem envia mensagens.
+6. Antes de divulgar o formulário, conecte-o a um backend/banco de dados seguro e configure autenticação para qualquer painel administrativo.
+7. Não coloque senhas, chaves privadas ou credenciais no HTML/JavaScript público.

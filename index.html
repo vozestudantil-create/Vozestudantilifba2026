@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071d49">
+  <meta name="description" content="VOZ ESTUDANTIL — Escuta, compromisso e representação no IFBA Campus Jacobina.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon-192.png">
+  <title>VOZ ESTUDANTIL | IFBA Jacobina</title>
+  <style>
+    :root{--navy:#071d49;--blue:#102e68;--yellow:#ffc400;--ink:#13213b;--muted:#66738b;--paper:#f5f7fb;--white:#fff}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
+    a{color:inherit;text-decoration:none} .wrap{width:min(1120px,calc(100% - 36px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(7,29,73,.96);backdrop-filter:blur(12px);color:#fff;border-bottom:3px solid var(--yellow)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.04em}.brand img{width:52px;height:52px;object-fit:cover;border-radius:12px;background:#fff}
+    nav{display:flex;gap:22px;align-items:center;font-size:.92rem;font-weight:700}nav a{opacity:.9}nav a:hover{color:var(--yellow)}.menu{display:none;background:none;color:#fff;border:1px solid #ffffff55;border-radius:10px;padding:8px 12px;font-size:1.2rem}
+    .hero{background:radial-gradient(circle at 80% 20%,#1d3c7c 0,transparent 32%),linear-gradient(135deg,#06183d,#0b2b67);color:#fff;padding:74px 0 68px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}.eyebrow{color:var(--yellow);font-weight:900;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem}
+    h1{font-size:clamp(2.6rem,6vw,5rem);line-height:.98;margin:14px 0 20px;letter-spacing:-.055em}h1 span{color:var(--yellow)}.hero p{max-width:620px;color:#e0e8fa;font-size:1.13rem}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:999px;font-weight:900;border:2px solid transparent;cursor:pointer}.primary{background:var(--yellow);color:var(--navy)}.secondary{border-color:#ffffff88;color:#fff}.hero-logo{width:100%;max-width:490px;justify-self:end;border-radius:28px;background:#fff;padding:12px;box-shadow:0 24px 70px #0005}
+    section{padding:76px 0}.section-head{max-width:720px;margin-bottom:34px}.section-head .eyebrow{color:#9a7400}h2{font-size:clamp(2rem,4vw,3rem);line-height:1.05;color:var(--navy);letter-spacing:-.04em;margin:10px 0 14px}.lead{color:var(--muted);font-size:1.05rem}
+    .manifesto{background:#fff}.manifesto-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}.quote{background:var(--navy);color:#fff;padding:34px;border-radius:24px;border-left:7px solid var(--yellow);font-size:1.45rem;font-weight:850}.quote em{color:var(--yellow);font-style:normal}
+    .people{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.person{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 10px 34px #10264a12}.person img{width:100%;height:360px;object-fit:cover;object-position:center 25%;display:block;background:#e8edf5}.person-info{padding:22px}.person-info h3{margin:0;color:var(--navy);font-size:1.35rem}.role{display:inline-block;margin:8px 0 10px;background:#fff3bf;color:#765700;border-radius:30px;padding:5px 11px;font-weight:850;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}.person-info p{color:var(--muted);margin:0}
+    .proposals{background:#eef2f8}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.proposal{background:#fff;border:1px solid #e4e9f2;border-radius:20px;padding:24px;min-height:205px}.number{width:42px;height:42px;border-radius:13px;background:var(--navy);color:var(--yellow);display:grid;place-items:center;font-weight:950}.proposal h3{color:var(--navy);margin:16px 0 8px;font-size:1.1rem}.proposal p{color:var(--muted);margin:0;font-size:.95rem}
+    .commitment{background:var(--navy);color:#fff}.commitment h2{color:#fff}.commitment .lead{color:#dce5f7}.commitment-box{border:1px solid #ffffff33;border-radius:22px;padding:28px;background:#ffffff0b}.commitment-box strong{color:var(--yellow)}
+    .participate{background:#fff}.formbox{background:var(--paper);border:1px solid #e5eaf2;border-radius:22px;padding:26px;max-width:760px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{display:block;font-weight:800;font-size:.88rem;color:var(--navy);margin-bottom:6px}input,select,textarea{width:100%;padding:13px 14px;border:1px solid #d7dfeb;border-radius:12px;background:#fff;font:inherit;color:var(--ink)}textarea{min-height:130px;resize:vertical}.full{grid-column:1/-1}.hint{font-size:.84rem;color:var(--muted);margin-top:14px}.submit{border:0;margin-top:16px}.notice{display:none;margin-top:14px;padding:12px;border-radius:12px;background:#fff3bf;color:#624900;font-weight:700}
+    footer{background:#04132f;color:#dbe4f5;padding:30px 0}.foot{display:flex;justify-content:space-between;gap:18px;align-items:center;flex-wrap:wrap}.foot strong{color:#fff}.small{font-size:.82rem;color:#aab8d2}
+    .install{position:fixed;right:16px;bottom:16px;z-index:12;box-shadow:0 8px 30px #071d4940;display:none}
+    @media(max-width:800px){.hero-grid,.manifesto-grid{grid-template-columns:1fr}.hero-logo{justify-self:start;max-width:420px}.cards{grid-template-columns:repeat(2,1fr)}nav{display:none;position:absolute;top:76px;left:0;right:0;background:var(--navy);padding:18px 24px 24px;flex-direction:column;align-items:flex-start}nav.open{display:flex}.menu{display:block}}
+    @media(max-width:560px){.wrap{width:min(100% - 28px,1120px)}.hero{padding:52px 0}.hero-grid{gap:26px}section{padding:58px 0}.people,.cards,.formgrid{grid-template-columns:1fr}.person img{height:330px}.quote{font-size:1.2rem;padding:24px}.brand span{font-size:.9rem}}
+  </style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#inicio"><img src="assets/icon-192.png" alt="Logo VOZ ESTUDANTIL"><span>VOZ ESTUDANTIL</span></a>
+  <button class="menu" id="menuBtn" aria-label="Abrir menu">☰</button>
+  <nav id="nav"><a href="#quem-somos">Quem somos</a><a href="#chapa">Nossa chapa</a><a href="#propostas">Propostas</a><a href="#compromisso">Compromisso</a><a href="#participe">Participe</a></nav>
+</div></header>
+<main>
+<section class="hero" id="inicio"><div class="wrap hero-grid">
+  <div><div class="eyebrow">IFBA Campus Jacobina</div><h1>A sua voz tem <span>lugar</span> nas decisões.</h1>
+  <p>Escuta, compromisso e representação. Uma candidatura construída para aproximar os estudantes do Conselho de Campus e fortalecer a participação de toda a comunidade estudantil.</p>
+  <div class="actions"><a class="btn primary" href="#propostas">Conheça nossas propostas</a><a class="btn secondary" href="#participe">Envie sua ideia</a></div></div>
+  <img class="hero-logo" src="assets/logo.png" alt="Logo da campanha VOZ ESTUDANTIL">
+</div></section>
+<section class="manifesto" id="quem-somos"><div class="wrap manifesto-grid">
+  <div><div class="eyebrow">Nossa ideia</div><h2>Estudante não é figurante. É protagonista!</h2><p class="lead">Acreditamos que representar é ouvir, dialogar, defender demandas coletivas e prestar contas. Queremos uma representação presente, acessível e comprometida com todos os cursos e turnos do IFBA Campus Jacobina.</p></div>
+  <div class="quote">“Uma representação forte começa com <em>escuta de verdade</em> e se constrói com participação.”</div>
+</div></section>
+<section id="chapa"><div class="wrap"><div class="section-head"><div class="eyebrow">Quem está nessa caminhada</div><h2>Conheça nossa chapa</h2><p class="lead">Duas pessoas, um compromisso: levar a voz dos estudantes aos espaços de decisão.</p></div>
+  <div class="people">
+    <article class="person"><img src="assets/ithalo.jpg" alt="Foto de Ithalo Samuel, candidato titular"><div class="person-info"><h3>Ithalo Samuel Novaes de Oliveira</h3><span class="role">Candidato titular</span><p>Licenciatura em Computação — IFBA Campus Jacobina.</p></div></article>
+    <article class="person"><img src="assets/tiago.jpg" alt="Foto de Tiago Matos, candidato suplente"><div class="person-info"><h3>Tiago Matos</h3><span class="role">Candidato suplente</span><p>Licenciatura em Computação — IFBA Campus Jacobina.</p></div></article>
+  </div>
+</div></section>
+<section class="proposals" id="propostas"><div class="wrap"><div class="section-head"><div class="eyebrow">O que defendemos</div><h2>Seis eixos de atuação</h2><p class="lead">Propostas para defender, dialogar e acompanhar junto à gestão e aos setores responsáveis.</p></div>
+  <div class="cards">
+    <article class="proposal"><div class="number">01</div><h3>Juventude com voz e oportunidades</h3><p>Ampliar a participação estudantil e defender mais oportunidades em pesquisa, extensão, monitoria, estágios, cursos e formação.</p></article>
+    <article class="proposal"><div class="number">02</div><h3>Assistência e permanência</h3><p>Dar visibilidade às demandas de alimentação, transporte, auxílios e condições para que ninguém precise abandonar os estudos.</p></article>
+    <article class="proposal"><div class="number">03</div><h3>Ensino com qualidade</h3><p>Encaminhar demandas sobre salas, laboratórios, equipamentos, conectividade e melhores condições de aprendizagem.</p></article>
+    <article class="proposal"><div class="number">04</div><h3>Apoio à aprendizagem</h3><p>Incentivar monitorias, grupos de estudo, acolhimento aos ingressantes e ações de enfrentamento à retenção e à evasão.</p></article>
+    <article class="proposal"><div class="number">05</div><h3>Cultura, esporte e integração</h3><p>Valorizar atividades culturais, esportivas e de convivência que aproximem estudantes de diferentes cursos e modalidades.</p></article>
+    <article class="proposal"><div class="number">06</div><h3>Escuta e representatividade</h3><p>Manter canais de diálogo, ouvir todos os turnos e modalidades e dar retorno sobre as demandas apresentadas.</p></article>
+  </div>
+</div></section>
+<section class="commitment" id="compromisso"><div class="wrap"><div class="section-head"><div class="eyebrow">Nosso compromisso</div><h2>Representar é estar presente.</h2><p class="lead">Não prometemos decidir sozinhos. Assumimos o compromisso de ouvir, defender pautas, encaminhar demandas e acompanhar respostas.</p></div>
+  <div class="commitment-box"><strong>Todos os cursos. Todos os turnos. Todas as vozes.</strong><p>Queremos construir uma representação transparente, participativa e aberta ao diálogo com estudantes do integrado, subsequente e superior, dos turnos diurno e noturno.</p></div>
+</div></section>
+<section class="participate" id="participe"><div class="wrap"><div class="section-head"><div class="eyebrow">Sua participação importa</div><h2>O que precisa melhorar no IFBA?</h2><p class="lead">Este espaço está preparado para receber sugestões, críticas e demandas da comunidade estudantil.</p></div>
+  <div class="formbox"><form id="ideaForm"><div class="formgrid">
+    <div><label for="nome">Seu nome (opcional)</label><input id="nome" name="nome" placeholder="Como podemos chamar você?"></div>
+    <div><label for="curso">Curso / modalidade</label><input id="curso" name="curso" placeholder="Ex.: Integrado, Subsequente, Superior"></div>
+    <div><label for="turno">Turno</label><select id="turno" name="turno"><option value="">Selecione</option><option>Matutino</option><option>Vespertino</option><option>Noturno</option><option>Integral</option></select></div>
+    <div><label for="tema">Assunto</label><select id="tema" name="tema"><option value="">Selecione</option><option>Assistência estudantil</option><option>Ensino e aprendizagem</option><option>Infraestrutura</option><option>Oportunidades</option><option>Cultura e esporte</option><option>Representação</option><option>Outro</option></select></div>
+    <div class="full"><label for="mensagem">Sua sugestão ou demanda</label><textarea id="mensagem" name="mensagem" required placeholder="Conte o que você gostaria de ver debatido..."></textarea></div>
+  </div><button class="btn primary submit" type="submit">Enviar contribuição</button><div class="notice" id="notice">Esta versão é uma prévia: o formulário ainda não está conectado a um banco de dados. Antes da divulgação pública, será necessário configurar o recebimento seguro das mensagens.</div><p class="hint">Não informe senhas, documentos ou dados pessoais sensíveis.</p></form></div>
+</div></section>
+</main>
+<footer><div class="wrap foot"><div><strong>VOZ ESTUDANTIL</strong><div class="small">IFBA Campus Jacobina · Escuta, compromisso e representação.</div></div><div class="small">Estudante não é figurante. É protagonista!</div></div></footer>
+<button class="btn primary install" id="installBtn">Instalar aplicativo</button>
+<script>
+  const menuBtn=document.getElementById('menuBtn'), nav=document.getElementById('nav');
+  menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+  document.getElementById('ideaForm').addEventListener('submit',e=>{e.preventDefault();document.getElementById('notice').style.display='block';});
+  let deferredPrompt; const installBtn=document.getElementById('installBtn');
+  window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;installBtn.style.display='block';});
+  installBtn.addEventListener('click',async()=>{if(!deferredPrompt)return;deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;installBtn.style.display='none';});
+  if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
+</script>
+</body></html>
